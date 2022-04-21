@@ -15,7 +15,7 @@ public:
     void add(int key) {
         bool inSet = false;
           for(int i = 0; i < keys.size(); i++){
-              if (keys[i] != key){
+              if (keys[i] == key){
                   inSet = true;
               }
               else {
@@ -42,13 +42,12 @@ public:
         for(int i = 0; i < keys.size(); i++){
             if (keys[i] == key){
                 inSet = true;
-                cout << "Contains key \n";
             }
             else {
                 inSet = false;
-                cout << "Does not contain key \n";
             }
         }
+        cout << "Contains: " << key << "\n";
        return inSet;
     }
 };
