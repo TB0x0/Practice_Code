@@ -1,6 +1,5 @@
 #!/usr/bin/python
 import sys
-import tkinter as tk
 
 def shortCondorCalc(atm_straddle_price, current_ticker_price):
     ctp = float(current_ticker_price)
@@ -17,10 +16,5 @@ def shortCondorCalc(atm_straddle_price, current_ticker_price):
     print("Short Call: {:.2f}\n".format(short_call))
     print("Long Call: {:.2f}\n".format(long_call))
 
-
-def main():
-    windows = tk.Tk()
-
 if __name__ == '__main__':
     shortCondorCalc(sys.argv[1], sys.argv[2])
-    main()
