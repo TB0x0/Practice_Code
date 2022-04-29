@@ -1,0 +1,71 @@
+# Filename: strike.kv
+
+<MyGrid>:
+
+    atmstraddle: atmstraddle
+    currentprice: currentprice
+    longput: longput
+    shortput: shortput
+    longcall: longcall
+    shortcall: shortcall
+
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+        #pos: 100, 100
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text: "ATM Straddle Price: "
+
+            TextInput:
+                id: atmstraddle
+                multinline:False
+
+            Label:
+                text: "Current Equity Price: "
+
+            TextInput:
+                id: currentprice
+                multiline:False
+
+        Button:
+            text:"Submit"
+            on_press: root.btn()
+
+        GridLayout:
+            cols:2
+
+            GridLayout:
+                cols:4
+
+                Label:
+                    text: "Long Put: "
+
+                TextInput:
+                    id: longput
+                    multinline:False
+
+                Label:
+                    text: "Short Put: "
+
+                TextInput:
+                    id: shortput
+                    multiline:False
+
+                Label:
+                    text: "Long Call: "
+
+                TextInput:
+                    id: longcall
+                    multinline:False
+
+                Label:
+                    text: "Short Call: "
+
+                TextInput:
+                    id: shortcall
+                    multiline:False
